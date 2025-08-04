@@ -11,6 +11,3 @@ class Acceptance < Tests::Base
   test_case [[1, 1, 1, 1], [2, 2, 2, 2]], 1.5
   test_case [[2, 2, 2, 2], [1, 1, 1, 1]], 1.5
 end
-
-# [        | 2,2,2,2]
-# [1,1,1,1 | ]
