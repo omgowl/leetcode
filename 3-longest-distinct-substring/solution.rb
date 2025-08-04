@@ -1,15 +1,17 @@
 # @param {String} s
 # @return {Integer}
-def length_of_longest_substring(s)
-  result = 0
-  idxs = {}
-  ss_start = 0
-  s.each_char.with_index do |c, i|
-    if idxs[c] && idxs[c] >= ss_start
-      result = [result, i - ss_start].max
-      ss_start = idxs[c] + 1
+def length_of_longest_substring(string)
+  result = left = 0
+  position = {}
+
+  string.each_char.with_index do |char, right|
+    if position[char] && position[char] >= left
+      result = [result, right - left].max
+      left = position[char] + 1
     end
-    idxs[c] = i
+
+    position[char] = right
   end
-  [result, s.size - ss_start].max
+
+  [result, string.size - left].max
 end

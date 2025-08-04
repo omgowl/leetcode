@@ -1,7 +1,7 @@
 # @param {ListNode} list1
 # @param {ListNode} list2
 # @return {Integer[]}
-def add_two_numbers(list1, list2)
+def add_two_numbers_speed(list1, list2)
   result = []
   sum = 0
 

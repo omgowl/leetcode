@@ -7,9 +7,10 @@ class ListNode
   end
 
   def ==(other)
-    return false if other.class != self.class
+    return to_s == other.join if other.is_a?(Array)
+    return to_s == other.to_s if other.is_a?(ListNode)
 
-    to_s == other.to_s
+    false
   end
 
   protected

@@ -1,6 +1,3 @@
-# @param {Integer[]} nums
-# @param {Integer} target
-# @return {Integer[]}
 def two_sum(nums, target)
   memory = {}
 
@@ -9,4 +6,6 @@ def two_sum(nums, target)
 
     memory[target - num] = idx
   end
+
+  false
 end
